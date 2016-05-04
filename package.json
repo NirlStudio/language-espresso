@@ -1,0 +1,20 @@
+{
+  "name": "language-sugly",
+  "version": "0.1.6",
+  "private": true,
+  "author": {
+    "email": "leevi@nirlstudio.com",
+    "name": "Leevi"
+  },
+  "license": "MIT",
+  "repository": "nirlstudio/language-sugly",
+  "description": "Sugly support for Atom (originally ported from language-lisp)",
+  "engines": {
+    "atom": ">1.0.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/nirlstudio/language-sugly/issues"
+  },
+  "homepage": "https://github.com/nirlstudio/language-sugly#readme"
+}

@@ -1,0 +1,19 @@
+'.source.sugly':
+  "print code":
+    prefix: 'code'
+    body: '(print code ${0:""})'
+  if:
+    prefix: 'if'
+    body: '(if ${1:condition} ${2: true} else ${3: false}),'
+  for:
+    prefix: 'for'
+    body: '(for ${1:condition} ${2:stepping} ${3:body}),'
+  "for-in":
+    prefix: 'forin'
+    body: '(for ${0:v} in ${1:iterable} ${2:body}),'
+  "for-range":
+    prefix: 'forrange'
+    body: '(for ${0:i} in ($range ${1:max}) ${2:body}),'
+  while:
+    prefix: 'while'
+    body: '(while ${1:condition} ${2:body} ),'
