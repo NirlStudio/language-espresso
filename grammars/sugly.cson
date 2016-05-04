@@ -33,10 +33,6 @@ patterns: [
     name: 'meta.function.multiple.sugly'
   }
   {
-    match: '(?:\\$)'
-    name: 'variable.language.space.sugly'
-  }
-  {
     match: '(?:\\(|\\s)(argc|argv)(?=\\)|\\s)'
     captures:
       1:
@@ -76,6 +72,15 @@ patterns: [
     name: 'meta.clause.delcare.sugly'
   }
   {
+    match: '(?:\\()\\s*(\\`|quote\\s)\\s*([^\\(\\"\\d]+)(?:\\))'
+    captures:
+      1:
+        name: 'keyword.control.words.sugly'
+      2:
+        name: 'string.unquoted.symbol.sugly'
+    name: 'meta.clause.quote.symbol.sugly'
+  }
+  {
     match: '(?:\\()\\s*(operator)\\s*(assert)(?=\\s)'
     captures:
       1:
@@ -92,10 +97,6 @@ patterns: [
     name: 'meta.clause.control.sugly'
   }
   {
-    match: '\\s+(?:quote|let|return|exit|halt|is|typeof|if|while|for|break|continue|flow|pipe|premise|then|operator|combine|mixin|assert)(?=\\)|\\s)'
-    name: 'invalid.illegal.sugly'
-  }
-  {
     match: '(?:\\()\\s*(else|in)(?=\\)|\\s)'
     captures:
       1:
@@ -107,6 +108,10 @@ patterns: [
     name: 'keyword.control.words.sugly'
   }
   {
+    match: '(\\:|\\@)|\\`'
+    name: 'keyword.control.operators.sugly'
+  }
+  {
     match: '(?:\\()\\s*(\\`|\\@|\\=\\>|\\=|\\-\\>|\\||\\?)(?=\\s|\\(|\\))'
     captures:
       1:
@@ -116,10 +121,6 @@ patterns: [
   {
     match: '\\s(?:\\`|\\@|\\=\\>|\\=|\\-\\>|\\||\\?)(?=\\s|\\(|\\))'
     name: 'invalid.illegal.sugly'
-  }
-  {
-    match: '(\\:|\\@)'
-    name: 'keyword.control.operators.sugly'
   }
   {
     match: '(?:\\()\\s*(\\=\\=|\\|\\||\\+\\=|\\+\\+|\\+|\\-\\=|\\-\\-|\\-|\\*\\=|\\*|\\/\\=|\\/|\\!\\=|\\!|\\>\\=|\\>|\\<\\=|\\<|\\&\\&)(?=\\s|\\(|\\))'
@@ -153,10 +154,6 @@ patterns: [
   }
   {
     match: '\\s(?:\\=\\=|\\|\\||\\+\\=|\\+\\+|\\+|\\-\\=|\\-\\-|\\-|\\*\\=|\\*|\\/\\=|\\/|\\!\\=|\\!|\\>\\=|\\<\\=|\\&\\&)(?=\\s|\\(|\\))'
-    name: 'invalid.illegal.sugly'
-  }
-  {
-    match: '\\s(?:car|cdr|eq|neq|and|or|not)(?=\\s|\\(|\\))'
     name: 'invalid.illegal.sugly'
   }
   {
@@ -205,7 +202,20 @@ patterns: [
         name: 'variable.language.space.sugly'
       2:
         name: 'support.function.invoke.sugly'
-    name: 'meta.clause.invoke.sugly'
+    name: 'meta.clause.system.invoke.sugly'
+  }
+  {
+    match: '(?:\\()\\s*(\\$)\\s*(\\w[\\w\\-]*)(?=\\s|\\)|\\()'
+    captures:
+      1:
+        name: 'variable.language.space.sugly'
+      2:
+        name: 'entity.name.function.invoke.sugly'
+    name: 'meta.clause.other.invoke.sugly'
+  }
+  {
+    match: '(?:\\$)'
+    name: 'variable.language.space.sugly'
   }
   {
     match: '(?:\\)|\\s)(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|beval|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
