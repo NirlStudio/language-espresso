@@ -81,7 +81,7 @@ patterns: [
     name: 'meta.clause.quote.symbol.sugly'
   }
   {
-    match: '(?:\\()\\s*(operator)\\s*(assert)(?=\\s)'
+    match: '(?:\\()\\s*(operator)\\s+(export)(?=\\s|\\)|\\()'
     captures:
       1:
         name: 'keyword.control.words.sugly'
@@ -90,7 +90,7 @@ patterns: [
     name: 'meta.clause.delcare.operator.sugly'
   }
   {
-    match: '(?:\\()\\s*(quote|let|object|array|function|closure|lambda|return|exit|halt|is|typeof|bool|number|string|symbol|date|if|while|for|break|continue|flow|pipe|premise|then|operator|concat|combine|mixin|assert)(?=\\s)'
+    match: '(?:\\()\\s*(quote|let|object|array|function|closure|lambda|return|exit|halt|is|typeof|bool|number|string|symbol|date|if|while|for|break|continue|flow|pipe|premise|then|operator|concat|combine|mixin|assert)(?=\\s|\\)|\\()'
     captures:
       1:
         name: 'keyword.control.words.sugly'
@@ -189,14 +189,14 @@ patterns: [
     name: 'meta.clause.print.sugly'
   }
   {
-    match: '(?:\\()\\s*(range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|beval|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
+    match: '(?:\\()\\s*(range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
     captures:
       1:
         name: 'support.variable.subject.sugly'
     name: 'meta.clause.subject.sugly'
   }
   {
-    match: '(?:\\()\\s*(\\$)\\s*(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|beval|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
+    match: '(?:\\()\\s*(\\$)\\s*(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
     captures:
       1:
         name: 'variable.language.space.sugly'
@@ -218,7 +218,7 @@ patterns: [
     name: 'variable.language.space.sugly'
   }
   {
-    match: '(?:\\)|\\s)(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|beval|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
+    match: '(?:\\)|\\s)(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
     captures:
       1:
         name: 'support.function.invoke.sugly'
