@@ -5,237 +5,233 @@ fileTypes: [
   's'
 ]
 foldingStartMarker: '\\(\\s*$'
-foldingStopMarker: '^\\s*\\)[\\.\\,]*'
+foldingStopMarker: '^\\s*\\)[\\.\\,]?'
 patterns: [
   {
-    match: '(#).*$\\n?'
+    name: 'comment.line.number-sign.sugly'
+    match: '(#).*[$\\n]'
     captures:
       1:
         name: 'punctuation.definition.comment.sugly'
-    name: 'comment.line.sharp.sugly'
   }
   {
-    match: '(?:\\()\\s*(function|closure|lambda|\\=\\s*[\\>]?)\\s+(\\w[\\w\\-]*)(?=\\s|\\(|\\))'
+    name: 'keyword.control.punctuation.sugly'
+    match: '\\$|\\:|\\@|\\`'
+  }
+  {
+    name: 'meta.sugly-language-constants'
+    match: '(?:\\(|\\)|\\s)\\s*(null|true|false|NaN|Infinity)(?=\\(|\\)|\\s)'
     captures:
-      1:
-        name: 'storage.type.function.sugly'
-      2:
-        name: 'variable.parameter.sugly'
-    name: 'meta.function.single.sugly'
+        1:
+          name: 'constant.language.sugly'
   }
   {
-    match: '(?:\\()\\s*(function|closure|lambda|\\=\\s*[\\>]?)\\s*(?:\\()(.*)(?:\\))'
-    captures:
-      1:
-        name: 'storage.type.function.sugly'
-      2:
-        name: 'variable.parameter.sugly'
-    name: 'meta.function.multiple.sugly'
-  }
-  {
-    match: '(?:\\(|\\s)(argc|argv)(?=\\)|\\s)'
-    captures:
-      1:
-        name: 'variable.language.function.sugly'
-    name: 'meta.function.arguments.sugly'
-  }
-  {
-    match: '(?:\\(|\\s)(\\%[CV\\d])(?=\\)|\\s)'
-    captures:
-      1:
-        name: 'variable.language.operator.sugly'
-    name: 'meta.operator.operands.sugly'
-  }
-  {
-    match: '(?:\\(|\\s)(Bool|String|Symbol|Object|Function|Date|Array|Bit|Uri|Math|Json|Sugly)(?=\\)|\\s)'
-    captures:
-      1:
-        name: 'support.variable.object.sugly'
-    name: 'meta.suport.objects.sugly'
-  }
-  {
-    match: '(?:\\()\\s*(let)\\s+(\\w[\\w\\-]*)(?=\\s*\\(\\s*((\\=\\s*\\>?)|(function|closure|lambda)(\\s|\\(|\\))))'
+    name: 'meta.sugly-declare-function'
+    match: '(?:\\()\\s*(let|var|global)\\s+(\\w[\\w\\-]*)(?=\\s*\\(\\s*((\\=\\s*\\>?)|(function|lambda)(\\s|\\(|\\))))'
     captures:
       1:
         name: 'keyword.control.let.function.sugly'
       2:
-        name: 'entity.name.function.declare.sugly'
-    name: 'meta.clause.delcare.function.sugly'
+        name: 'entity.name.function.sugly'
   }
   {
-    match: '(?:\\(\\s*)(let)\\s+(\\w[\\w\\-]*)(?=[\\)\\s])'
+    name: 'meta.sugly-delcare-variable'
+    match: '(?:\\()\\s*(let|var|global)\\s+(\\w[\\w\\-]*)(?=[\\)\\s])'
     captures:
       1:
         name: 'keyword.control.let.variable.sugly'
       2:
-        name: 'variable.other.declare.sugly'
-    name: 'meta.clause.delcare.sugly'
+        name: 'variable.other.sugly'
   }
   {
-    match: '(?:\\()\\s*(\\`|quote\\s)\\s*([^\\(\\"\\d]+)(?:\\))'
-    captures:
-      1:
-        name: 'keyword.control.words.sugly'
-      2:
-        name: 'string.unquoted.symbol.sugly'
-    name: 'meta.clause.quote.symbol.sugly'
-  }
-  {
+    name: 'meta.sugly-delcare-operator'
     match: '(?:\\()\\s*(operator)\\s+(export)(?=\\s|\\)|\\()'
     captures:
       1:
-        name: 'keyword.control.words.sugly'
+        name: 'keyword.control.sugly'
       2:
-        name: 'keyword.control.words.sugly'
-    name: 'meta.clause.delcare.operator.sugly'
+        name: 'storage.modifier.sugly'
   }
   {
-    match: '(?:\\()\\s*(quote|let|object|array|function|closure|lambda|return|exit|halt|is|typeof|bool|number|string|symbol|date|if|while|for|break|continue|flow|pipe|premise|then|operator|concat|combine|mixin|assert)(?=\\s|\\)|\\()'
+    name: 'meta.sugly-control-keywords'
+    match: '(?:\\(|\\)|\\s)\\s*(quote|let|var|global|return|exit|halt|if|else|while|for|in|break|continue|operator|assert)(?=\\(|\\)|\\s)'
     captures:
-      1:
-        name: 'keyword.control.words.sugly'
-    name: 'meta.clause.control.sugly'
+        1:
+          name: 'keyword.control.sugly'
   }
   {
-    match: '(?:\\()\\s*(else|in)(?=\\)|\\s)'
+    name: 'meta.sugly-else-in-invalid-position'
+    match: '(?:\\()\\s*(else|in)(?=\\)|\\(|\\s)'
     captures:
       1:
         name: 'invalid.illegal.sugly'
-    name: 'meta.clause.invalid.sugly'
   }
   {
-    match: '\\s(?:else|in)(?=\\)|\\s)'
-    name: 'keyword.control.words.sugly'
-  }
-  {
-    match: '(\\:|\\@)|\\`'
-    name: 'keyword.control.operators.sugly'
-  }
-  {
-    match: '(?:\\()\\s*(\\`|\\@|\\=\\>|\\=|\\-\\>|\\||\\?)(?=\\s|\\(|\\))'
+    name: 'meta.sugly-general-operators'
+    match: '(?:\\(|\\)|\\s)\\s*(\\`|\\+|\\+\\+|\\+\\=|\\-|\\-\\-|\\-\\=|\\*|\\*\\=|\\/|\\/\\=|\\&\\&|\\|\\||\\!|\\?|\\?\\?)(?=\\(|\\)|\\s)'
     captures:
       1:
-        name: 'keyword.control.operators.sugly'
-    name: 'meta.clause.control.operator.sugly'
+        name: 'keyword.control.sugly'
   }
   {
-    match: '\\s(?:\\`|\\@|\\=\\>|\\=|\\-\\>|\\||\\?)(?=\\s|\\(|\\))'
-    name: 'invalid.illegal.sugly'
-  }
-  {
-    match: '(?:\\()\\s*(\\=\\=|\\|\\||\\+\\=|\\+\\+|\\+|\\-\\=|\\-\\-|\\-|\\*\\=|\\*|\\/\\=|\\/|\\!\\=|\\!|\\>\\=|\\>|\\<\\=|\\<|\\&\\&)(?=\\s|\\(|\\))'
+    name: 'meta.sugly-comparison-operators'
+    match: '(?:\\(|\\)|\\s)\\s*(\\>|\\>\\=|\\<|\\<\\=|\\=\\=|\\!\\=)(?=\\(|\\)|\\s)'
     captures:
       1:
-        name: 'keyword.operator.sugly'
-    name: 'meta.clause.control.operator.sugly'
+        name: 'keyword.control.sugly'
   }
   {
-    match: '(?:\\s|\\b)(\\<)\\s*(?=\\w[\\w\\-]*)'
+    name: 'meta.sugly-encode-clause'
+    match: '(?:\\()\\s*(encode)\\s+(bool|number|string|symbol|object|function|date|array|value|clause|program)(?=\\s|\\)|\\()'
     captures:
       1:
-        name: 'storage.type.function.sugly'
-    name: 'meta.object.assign.sugly'
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.function.sugly'
   }
   {
-    match: '(?:\\s|\\b)(\\>)\\s*(?=\\w[\\w\\-]*)'
+    name: 'meta.sugly-print-clause'
+    match: '(?:\\()\\s*(print)\\s+(code|value|clause|program|info|warn)(?=\\)|\\(|\\s)'
     captures:
       1:
-        name: 'storage.type.function.sugly'
-    name: 'meta.object.function.highorder.sugly'
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.function.sugly'
   }
   {
-    match: '(\\>)\\s*(?:\\()(.*)(?:\\))'
+    name: 'meta.sugly-uri-clause'
+    match: '(?:\\()\\s*(uri)\\s+(encode|decode|escape|unescape)(?=\\)|\\(|\\s)'
     captures:
       1:
-        name: 'storage.type.function.sugly'
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-math-constants'
+    match: '(?:\\()\\s*(math)\\s+(E|LN2|LN10|LOG2E|LOG10E|PI|SQRT2|SQRT1_2)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.constant.sugly'
+  }
+  {
+    name: 'meta.sugly-math-clause'
+    match: '(?:\\()\\s*(math)\\s+(abs|ceil|floor|round|sin|cos|tan|asin|acos|atan|atan2|exp|log|pow|max|min|random)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-json-clause'
+    match: '(?:\\()\\s*(json)\\s+(parse|of)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.variable.sugly'
+      2:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-generic-types'
+    match: '(?:\\(|\\)|\\s)\\s*(Type|Bool|Number|Int|Float|String|Symbol|Function)(?=\\(|\\)|\\s)'
+    captures:
+      1:
+        name: 'support.class.sugly'
+  }
+  {
+    name: 'meta.sugly-generic-classes'
+    match: '(?:\\(|\\)|\\s)\\s*(Class|Object|Date|Array)(?=\\(|\\)|\\s)'
+    captures:
+      1:
+        name: 'support.class.sugly'
+  }
+  {
+    name: 'meta.sugly-function-groups'
+    match: '(?:\\(|\\)|\\s)\\s*(encode|print|uri|math|json|runtime)(?=\\(|\\)|\\s)'
+    captures:
+      1:
+        name: 'support.variable.sugly'
+  }
+  {
+    name: 'meta.sugly-general-functions'
+    match: '\\s(value\\-of|create|new|is|is\\-not|is\\-a|is\\-not\\-a|equals|not\\-equals|type|get\\-type|super|is\\-empty|not\\-empty|to\\-code|to\\-string|to\\-clause|to\\-program)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-type-function'
+    match: '(?:\\()\\s*(bool|number|string|symbol|object|class|function|lambda|date|array)(?=\\s|\\)|\\()'
+    captures:
+      1:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-global-function'
+    match: '(?:\\()\\s*(range|iterate|compile|encoder|export|eval|load|exec|run|import|require|retire|define|should)(?=\\s|\\)|\\()'
+    captures:
+      1:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-invoke-function'
+    match: '(?:\\()\\s*(apply|call|execute)(?=\\s|\\)|\\()'
+    captures:
+      1:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-function-variables'
+    match: '(?:\\(|\\)|\\s)(argc|argv|this)(?=\\(|\\)|\\s)'
+    captures:
+      1:
+        name: 'variable.language.sugly'
+  }
+  {
+    name: 'meta.sugly-function-recursion'
+    match: '(?:\\(|\\)|\\s)(do)(?=\\(|\\)|\\s)'
+    captures:
+      1:
+        name: 'support.function.sugly'
+  }
+  {
+    name: 'meta.sugly-single-parameter-function'
+    match: '(?:\\()\\s*(\\=\\s*[\\>]?)\\s+(\\w[\\w\\-]*)(?=\\s|\\(|\\))'
+    captures:
+      1:
+        name: 'keyword.control.function.sugly'
       2:
         name: 'variable.parameter.sugly'
-    name: 'meta.function.highorder.sugly'
   }
   {
-    match: '\\s(?:\\=\\=|\\|\\||\\+\\=|\\+\\+|\\+|\\-\\=|\\-\\-|\\-|\\*\\=|\\*|\\/\\=|\\/|\\!\\=|\\!|\\>\\=|\\<\\=|\\&\\&)(?=\\s|\\(|\\))'
-    name: 'invalid.illegal.sugly'
-  }
-  {
-    match: '(?:\\(|\\)|\\s)(null)(?=\\s|\\)|\\()'
+    name: 'meta.sugly-multiple-parameter-function'
+    match: '(?:\\()\\s*(\\=\\s*[\\>]?)\\s*(?:\\()(.*)(?:\\))'
     captures:
       1:
-        name: 'constant.language.null.sugly'
-    name: "meta.constantx.sugly"
-  }
-  {
-    match: '(?:\\(|\\)|\\s)(true|false)(?=\\s|\\)|\\()'
-    captures:
-      1:
-        name: 'constant.language.boolean.sugly'
-    name: "meta.constantx.sugly"
-  }
-  {
-    match: '(?:\\()\\s*(encode)\\s+(bool|number|string|symbol|object|function|date|array|value|clause)(?=\\s|\\)|\\()'
-    captures:
-      1:
-        name: 'support.variable.encode.sugly'
+        name: 'keyword.control.function.sugly'
       2:
-        name: 'support.function.sugly'
-    name: 'meta.clause.encode.sugly'
+        name: 'variable.parameter.sugly'
   }
   {
-    match: '(?:\\()\\s*(print)\\s+(code|value|clause|info|warn)(?=\\)|\\(|\\s)'
+    name: 'meta.sugly-operator-operands'
+    match: '(?:\\(|\\)|\\s)(\\%[CV\\d])(?=\\(|\\)|\\s)'
     captures:
       1:
-        name: 'support.variable.print.sugly'
-      2:
-        name: 'support.function.sugly'
-    name: 'meta.clause.print.sugly'
+        name: 'variable.language.sugly'
   }
   {
-    match: '(?:\\()\\s*(range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
+    name: 'meta.sugly-subject-or-predicate'
+    match: '(?:\\()\\s*(\\w[\\w\\-]*)(?=\\(|\\)|\\s|\\:\\")'
     captures:
       1:
-        name: 'support.variable.subject.sugly'
-    name: 'meta.clause.subject.sugly'
+        name: 'entity.name.sugly'
   }
   {
-    match: '(?:\\()\\s*(\\$)\\s*(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
-    captures:
-      1:
-        name: 'variable.language.space.sugly'
-      2:
-        name: 'support.function.invoke.sugly'
-    name: 'meta.clause.system.invoke.sugly'
-  }
-  {
-    match: '(?:\\()\\s*(\\$)\\s*(\\w[\\w\\-]*)(?=\\s|\\)|\\()'
-    captures:
-      1:
-        name: 'variable.language.space.sugly'
-      2:
-        name: 'entity.name.function.invoke.sugly'
-    name: 'meta.clause.other.invoke.sugly'
-  }
-  {
-    match: '(?:\\$)'
-    name: 'variable.language.space.sugly'
-  }
-  {
-    match: '(?:\\)|\\s)(object|array|function|closure|lambda|bool|number|string|symbol|date|range|iterate|isEmpty|isNotEmpty|compile|encoder|encode|print|eval|load|import|export|call|exec|run|require|self|next|define|should)(?=\\s|\\)|\\()'
-    captures:
-      1:
-        name: 'support.function.invoke.sugly'
-    name: 'meta.clause.invoke.sugly'
-  }
-  {
-    match: '\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
     name: 'constant.numeric.sugly'
-  }
-  {
-    match: '(?:\\()\\s*(\\w[\\w\\-]*)\\s+(\\w+[\\w\\-]*)(?=\\s+|\\)|\\()'
-    captures:
-      1:
-        name: 'variable.other.subject.sugly'
-      2:
-        name: 'entity.name.function.invoke.sugly'
-    name: 'meta.clause.normal.sugly'
+    match: '\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
   }
   {
     begin: '"'
