@@ -135,6 +135,24 @@ patterns: [
         name: 'support.function.sugly'
   }
   {
+    name: 'meta.sugly-number-constants'
+    match: '(?:\\()\\s*(Number)\\s+(MAX_VALUE|MIN_VALUE|NEGATIVE_INFINITY|POSITIVE_INFINITY)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.class.sugly'
+      2:
+        name: 'support.constant.sugly'
+  }
+  {
+    name: 'meta.sugly-int-constants'
+    match: '(?:\\()\\s*(Int)\\s+(MAX_BITS|MIN_BITS|MAX_VALUE|MIN_VALUE)(?=\\)|\\(|\\s)'
+    captures:
+      1:
+        name: 'support.class.sugly'
+      2:
+        name: 'support.constant.sugly'
+  }
+  {
     name: 'meta.sugly-generic-types'
     match: '(?:\\(|\\)|\\s)\\s*(Type|Bool|Number|Int|Float|String|Symbol|Function)(?=\\(|\\)|\\s)'
     captures:
