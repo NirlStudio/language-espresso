@@ -1,6 +1,0 @@
-'.source.sugly':
-  editor:
-    commentStart: '# '
-    tabLength: 2
-  "bracket-matcher":
-    autocompleteBrackets: false
