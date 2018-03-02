@@ -1,13 +1,13 @@
 {
   "name": "language-sugly",
-  "version": "0.6.9",
+  "version": "0.6.3",
   "private": true,
   "author": {
     "email": "leevi@nirlstudio.com",
     "name": "Leevi"
   },
   "license": "MIT",
-  "repository": "nirlstudio/language-sugly",
+  "repository": "https://github.com/nirlstudio/language-sugly",
   "description": "Sugly support for Atom (originally ported from language-lisp)",
   "engines": {
     "atom": ">1.0.0"
