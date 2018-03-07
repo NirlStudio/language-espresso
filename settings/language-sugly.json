@@ -2,7 +2,10 @@
   ".source.sugly": {
     "editor": {
       "commentStart": "# ",
-      "tabLength": 2
+      "tabLength": 2,
+      "showIndentGuide": true,
+      "preferredLineLength": 80,
+      "nonWordCharacters": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
     },
     "bracket-matcher": {
       "autocompleteBrackets": true
