@@ -205,20 +205,8 @@
       }
     },
     {
-      "name": "meta.operator-empty-sugly",
-      "match": "(?:\\()\\s*(operator)\\s+(empty)\\b",
-      "captures": {
-        "1": {
-          "name": "storage.type.generic.sugly"
-        },
-        "2": {
-          "name": "keyword.other.operator-empty.sugly"
-        }
-      }
-    },
-    {
       "name": "meta.function-empty-sugly",
-      "match": "(?:\\()\\s*(lambda|function|array|object|class)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(operator|lambda|function|array|object|class)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -238,11 +226,26 @@
       }
     },
     {
-      "name": "meta.function-other-empty-sugly",
-      "match": "(?:\\)|\\s)(empty)\\b",
+      "name": "meta.operator-noop-sugly",
+      "match": "(?:\\()\\s*(operator)\\s+(noop)\\b",
       "captures": {
         "1": {
-          "name": "support.function.other.empty.sugly"
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "keyword.other.operator_.noop.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.lambda-noop-sugly",
+      "match": "(?:\\()\\s*(lambda|function)\\s+(noop)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.function.noop.sugly"
         }
       }
     },
@@ -266,7 +269,7 @@
     },
     {
       "name": "meta.constant-number-sugly",
-      "match": "(?:\\()\\s*(number)\\s+(max-int|min-int|max-bits|min-bits|infinity|-infinity|max|min|bits|invalid)\\b",
+      "match": "(?:\\()\\s*(number)\\s+(max-int|min-int|max-bits|min-bits|infinite|-infinite|max|min|bits|invalid)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
