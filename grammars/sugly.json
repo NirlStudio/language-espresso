@@ -185,7 +185,7 @@
     },
     {
       "name": "meta.function-type-sugly",
-      "match": "(?:\\)|\\s)(of|indexer-of|objectify|typify)(?=\\)|\\(|\\s)",
+      "match": "(?:\\)|\\s)(of|objectify|typify)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
           "name": "support.function.sugly"
@@ -194,7 +194,7 @@
     },
     {
       "name": "meta.constant-empty-sugly",
-      "match": "(?:\\()\\s*(bool|string|number|date|range|symbol|tuple)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
