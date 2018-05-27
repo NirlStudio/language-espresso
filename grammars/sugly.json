@@ -293,7 +293,7 @@
     },
     {
       "name": "meta.function-number-sugly",
-      "match": "(?:\\)|\\s)+(is-valid|is-invalid|is-int|is-not-int|is-bits|is-not-bits|is-finite|is-infinite|and|minus|times|divided-by|ceil|floor|round|trunc)\\b",
+      "match": "(?:\\)|\\s)+(is-valid|is-invalid|is-int|is-not-int|is-bits|is-not-bits|is-finite|is-infinite|as-int|as-bits|and|minus|times|divided-by|ceil|floor|round|trunc)\\b",
       "captures": {
         "1": {
           "name": "support.function.number.sugly"
