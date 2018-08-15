@@ -401,7 +401,7 @@
     },
     {
       "name": "meta.function-array-sugly",
-      "match": "(?:\\)|\\s)+(count|get|set|reset|clear|has|swap|splice|pop|push|reverse|sort|join)\\b",
+      "match": "(?:\\)|\\s)+(count|append|get|set|reset|remove|clear|has|swap|splice|pop|push|reverse|sort|join)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
