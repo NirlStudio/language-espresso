@@ -301,6 +301,18 @@
       }
     },
     {
+      "name": "meta.constant-date-sugly",
+      "match": "(?:\\()\\s*(date)\\s+(invalid)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.constant.date.sugly"
+        }
+      }
+    },
+    {
       "name": "meta.function-date-type-sugly",
       "match": "(?:\\()\\s*(date)\\s+(parse|of-utc|now|timestamp|timezone)\\b",
       "captures": {
@@ -314,7 +326,7 @@
     },
     {
       "name": "meta.function-date-sugly",
-      "match": "(?:\\)|\\s)+(the-date|the-time|all-fields|timestamp)\\b",
+      "match": "(?:\\)|\\s)+(date-fields|time-fields|all-fields|week-day|timestamp)\\b",
       "captures": {
         "1": {
           "name": "support.function.date.sugly"
