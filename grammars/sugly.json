@@ -32,7 +32,7 @@
     },
     {
       "name": "meta.keyword-assignment-sugly",
-      "match": "\\(\\s*(let|var|export|import|include)\\b",
+      "match": "\\(\\s*(let|var|export|import|include|load)\\b",
       "captures": {
         "1": {
           "name": "keyword.other.assignment.sugly"
@@ -464,7 +464,7 @@
     },
     {
       "name": "meta.function-runtime-sugly",
-      "match": "\\b(compile|compiler|tokenize|tokenizer|interpreter|eval|import|load|include|run)\\b",
+      "match": "\\b(compile|compiler|tokenize|tokenizer|interpreter|eval|run)\\b",
       "captures": {
         "1": {
           "name": "support.function.runtime.sugly"
