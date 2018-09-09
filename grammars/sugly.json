@@ -32,7 +32,7 @@
     },
     {
       "name": "meta.keyword-assignment-sugly",
-      "match": "\\(\\s*(let|var|export)\\b",
+      "match": "\\(\\s*(let|var|export|import|include)\\b",
       "captures": {
         "1": {
           "name": "keyword.other.assignment.sugly"
@@ -335,7 +335,7 @@
     },
     {
       "name": "meta.constant-symbol-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(etc|all|quote|lambda|function|operator|let|var|export|object|pairing|comment)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|function|operator|let|var|export|begin|end|comma|period|object|pairing|comment)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
