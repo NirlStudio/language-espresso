@@ -383,7 +383,7 @@
     },
     {
       "name": "meta.function-tuple-sugly",
-      "match": "(?:\\)|\\s)+(is-plain|not-plain|source-map|iterate|merge|to-array)\\b",
+      "match": "(?:\\)|\\s)+(is-plain|not-plain|as-plain|source-map|iterate|merge|to-array)\\b",
       "captures": {
         "1": {
           "name": "support.function.tuple.sugly"
