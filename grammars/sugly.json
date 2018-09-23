@@ -41,7 +41,7 @@
     },
     {
       "name": "meta.control-flow-sugly",
-      "match": "\\(\\s*(if|for|while|break|continue)\\b",
+      "match": "\\b(if|for|while|break|continue)\\b",
       "captures": {
         "1": {
           "name": "keyword.control.flow.sugly"
@@ -59,7 +59,7 @@
     },
     {
       "name": "meta.control-procedure-sugly",
-      "match": "\\(\\s*(redo|return|exit)\\b",
+      "match": "\\b(redo|return|exit)\\b",
       "captures": {
         "1": {
           "name": "keyword.control.procedure.sugly"
