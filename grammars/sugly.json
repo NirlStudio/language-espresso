@@ -113,7 +113,7 @@
     },
     {
       "name": "meta.operator-lambda-decl-sugly",
-      "match": "\\(\\s*(\\=[\\>]?)(?=\\(|\\)|\\s)",
+      "match": "\\(\\s*(\\=[\\>]?)(?=\\(|\\)|\\:|\\s)",
       "captures": {
         "1": {
           "name": "support.function.lambda-decl.sugly"
@@ -131,7 +131,7 @@
     },
     {
       "name": "meta.operator-double-sugly",
-      "match": "\\(\\s*(\\+\\+|--)(?=\\(|\\)|\\s)",
+      "match": "\\(\\s*(\\+\\+|--)(?=\\(|\\)|\\:|\\s)",
       "captures": {
         "1": {
           "name": "keyword.other.double.sugly"
