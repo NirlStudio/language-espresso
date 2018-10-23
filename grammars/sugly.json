@@ -400,6 +400,36 @@
       }
     },
     {
+      "name": "meta.function-iterator-type-sugly",
+      "match": "(?:\\()\\s*(iterator)\\s+(of-unsafe)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.function.iterator.type.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.function-iterator-sugly",
+      "match": "(?:\\)|\\s)+(skip|keep|select|map|reduce|count|sum|join|collect|finish|average)\\b",
+      "captures": {
+        "1": {
+          "name": "support.function.iterator.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.function-iteration-sugly",
+      "match": "\\b(safely-iterate|iterate)\\b",
+      "captures": {
+        "1": {
+          "name": "support.function.iteration.sugly"
+        }
+      }
+    },
+    {
       "name": "meta.function-array-type-sugly",
       "match": "(?:\\()\\s*(array)\\s+(from)\\b",
       "captures": {
@@ -413,7 +443,7 @@
     },
     {
       "name": "meta.function-array-sugly",
-      "match": "(?:\\)|\\s)+(count|append|get|set|reset|clear|remove|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find|select|map|reduce|join)\\b",
+      "match": "(?:\\)|\\s)+(is-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
@@ -450,15 +480,6 @@
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
-        }
-      }
-    },
-    {
-      "name": "meta.function-iteration-sugly",
-      "match": "\\b(iterate|iterator|select|selector|collect|collector|reduce|reducer)\\b",
-      "captures": {
-        "1": {
-          "name": "support.function.iteration.sugly"
         }
       }
     },
