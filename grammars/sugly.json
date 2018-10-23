@@ -443,7 +443,7 @@
     },
     {
       "name": "meta.function-array-sugly",
-      "match": "(?:\\)|\\s)+(is-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
+      "match": "(?:\\)|\\s)+(is-sparse|not-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
