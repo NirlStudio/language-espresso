@@ -86,7 +86,7 @@
     },
     {
       "name": "meta.type-generic-sugly",
-      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|array|iterator|object|class)\\b",
+      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|iterator|array|object|class)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -194,7 +194,7 @@
     },
     {
       "name": "meta.constant-empty-sugly",
-      "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple|iterator)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -206,7 +206,7 @@
     },
     {
       "name": "meta.function-empty-sugly",
-      "match": "(?:\\()\\s*(operator|lambda|function|array|iterator|object|class)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(operator|lambda|function|array|object|class)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
