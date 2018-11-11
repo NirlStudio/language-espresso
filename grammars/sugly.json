@@ -86,7 +86,7 @@
     },
     {
       "name": "meta.type-generic-sugly",
-      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|array|object|class)\\b",
+      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|array|iterator|object|class)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -206,7 +206,7 @@
     },
     {
       "name": "meta.function-empty-sugly",
-      "match": "(?:\\()\\s*(operator|lambda|function|array|object|class)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(operator|lambda|function|array|iterator|object|class)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -417,15 +417,6 @@
       "captures": {
         "1": {
           "name": "support.function.iterator.sugly"
-        }
-      }
-    },
-    {
-      "name": "meta.function-iteration-sugly",
-      "match": "\\b(safely-iterate|iterate)\\b",
-      "captures": {
-        "1": {
-          "name": "support.function.iteration.sugly"
         }
       }
     },
