@@ -392,7 +392,7 @@
     },
     {
       "name": "meta.function-operation-sugly",
-      "match": "(?:\\)|\\s)+(parameters|body|is-generic|not-generic|apply)\\b",
+      "match": "(?:\\)|\\s)+(parameters|body|is-generic|not-generic|is-bound|not-bound|apply|bind)\\b",
       "captures": {
         "1": {
           "name": "support.function.operation.sugly"
