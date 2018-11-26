@@ -95,7 +95,7 @@
     },
     {
       "name": "meta.constant-language-sugly",
-      "match": "\\b(null|true|false)\\b",
+      "match": "\\b(null|true|false|descending|equivalent|ascending)\\b",
       "captures": {
         "1": {
           "name": "constant.language.sugly"
