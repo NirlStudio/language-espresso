@@ -621,7 +621,7 @@
     },
     {
       "name": "constant.numeric.int.sugly",
-      "match": "\\b([1-9][0-9]*i?)\\b"
+      "match": "\\b((0|[1-9][0-9]*)i?)\\b"
     },
     {
       "name": "constant.numeric.hex.sugly",
