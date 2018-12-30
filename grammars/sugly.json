@@ -23,7 +23,7 @@
     },
     {
       "name": "meta.keyword-quote-sugly",
-      "match": "\\(\\s*(quote)\\b",
+      "match": "\\(\\s*(quote|unquote)\\b",
       "captures": {
         "1": {
           "name": "keyword.other.quote.sugly"
@@ -476,7 +476,7 @@
     },
     {
       "name": "meta.function-runtime-sugly",
-      "match": "\\b(compile|compiler|tokenize|tokenizer|interpreter|eval|run)\\b",
+      "match": "\\b(compile|compiler|tokenize|tokenizer|interpreter|eval|run|env)\\b",
       "captures": {
         "1": {
           "name": "support.function.runtime.sugly"
