@@ -10,7 +10,7 @@
   "patterns": [
     {
       "name": "comment.line.hash.sugly",
-      "match": "(#).*$\\n?",
+      "match": "(#)[^(].*$\\n?",
       "captures": {
         "1": {
           "name": "punctuation.definition.comment.sugly"
@@ -655,6 +655,42 @@
           "name": "constant.character.escape.sugly"
         }
       ]
+    },
+    {
+      "begin": "'",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.sugly"
+        }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.sugly"
+        }
+      },
+      "name": "string.format.single.sugly",
+      "patterns": [
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.sugly"
+        }
+      ]
+    },
+    {
+      "begin": "#\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.begin.sugly"
+        }
+      },
+      "end": "\\)#",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.comment.end.sugly"
+        }
+      },
+      "name": "comment.block.hash.sugly"
     }
   ]
 }
