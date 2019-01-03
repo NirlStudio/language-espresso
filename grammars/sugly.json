@@ -335,7 +335,7 @@
     },
     {
       "name": "meta.constant-symbol-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|function|operator|let|var|local|begin|end|comma|semicolon|period|literal|pairing|comment)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|function|operator|let|var|local|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -485,7 +485,7 @@
     },
     {
       "name": "meta.function-lib-sugly",
-      "match": "\\b(encode|print|warn)\\b",
+      "match": "\\b(print|warn)\\b",
       "captures": {
         "1": {
           "name": "support.function.lib.sugly"
