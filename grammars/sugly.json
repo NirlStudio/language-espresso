@@ -259,8 +259,20 @@
       }
     },
     {
+      "name": "meta.function-string-type-sugly",
+      "match": "(?:\\()\\s*(string)\\s+(of-chars|of-code|format)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.function.string.type.sugly"
+        }
+      }
+    },
+    {
       "name": "meta.function-string-sugly",
-      "match": "(?:\\)|\\s)(of-chars|starts-with|ends-with|trim-left|trim-right|trim|replace|to-upper|to-lower|split|char-at)\\b",
+      "match": "(?:\\)|\\s)(starts-with|ends-with|trim-left|trim-right|trim|replace|to-upper|to-lower|split|char-at)\\b",
       "captures": {
         "1": {
           "name": "support.function.string.sugly"
