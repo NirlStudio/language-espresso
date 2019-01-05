@@ -185,7 +185,7 @@
     },
     {
       "name": "meta.function-type-sugly",
-      "match": "(?:\\)|\\s)(of|objectify|typify)(?=\\)|\\(|\\s)",
+      "match": "(?:\\)|\\s)(of|reflect|seal|is-sealed)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
           "name": "support.function.sugly"
