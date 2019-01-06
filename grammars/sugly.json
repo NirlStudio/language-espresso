@@ -32,7 +32,7 @@
     },
     {
       "name": "meta.keyword-assignment-sugly",
-      "match": "\\b(let|var|local|export|import|load)\\b",
+      "match": "\\b(let|var|const|local|locon|export|import|load)\\b",
       "captures": {
         "1": {
           "name": "keyword.other.assignment.sugly"
@@ -113,7 +113,7 @@
     },
     {
       "name": "meta.operator-lambda-decl-sugly",
-      "match": "\\(\\s*(\\=[\\>]?)(?=\\(|\\)|\\:|\\s)",
+      "match": "\\(\\s*(\\-\\>|\\=[\\>]?)(?=\\(|\\)|\\:|\\s)",
       "captures": {
         "1": {
           "name": "support.function.lambda-decl.sugly"
@@ -140,7 +140,7 @@
     },
     {
       "name": "meta.operator-general-sugly",
-      "match": "(?:\\)|\\s)(\\?[\\*\\?]?|\\&\\&|\\|\\|)(?=\\(|\\)|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)(\\?[\\*\\?]?|\\&\\&|\\|\\|)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
           "name": "keyword.other.general.sugly"
@@ -149,7 +149,7 @@
     },
     {
       "name": "meta.operator-arithmetic-sugly",
-      "match": "(?:\\)|\\s)(\\+[\\+\\=]?|\\-[\\-\\=]?|\\*[\\=]?|\\/[\\=]?|\\%[\\=]?)(?=\\(|\\)|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)(\\+[\\+\\=]?|\\-[\\-\\=]?|\\*[\\=]?|\\/[\\=]?|\\%[\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
           "name": "keyword.other.arithmetic.sugly"
@@ -158,7 +158,7 @@
     },
     {
       "name": "meta.operator-bitwise-sugly",
-      "match": "(?:\\)|\\s)(\\&[\\=]?|\\|[\\=]?|\\^[\\=]?|\\<\\<[\\=]?|\\>{2,3}[\\=]?)(?=\\(|\\)|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)(\\&[\\=]?|\\|[\\=]?|\\^[\\=]?|\\<\\<[\\=]?|\\>{2,3}[\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
           "name": "keyword.other.bitwise.sugly"
@@ -167,7 +167,7 @@
     },
     {
       "name": "meta.operator-comparison-sugly",
-      "match": "(?:\\)|\\s)([\\!\\=]\\={2}|[\\=\\!][\\=]|[\\>\\<][\\=]?)(?=\\(|\\)|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)([\\!\\=]\\={2}|[\\=\\!][\\=]|[\\>\\<][\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
           "name": "keyword.other.sugly"
@@ -176,7 +176,7 @@
     },
     {
       "name": "meta.function-entity-sugly",
-      "match": "(?:\\)|\\s)(is-not|is|equals|not-equals|compare|is-empty|not-empty|is-a|is-not-a|to-code|to-string)(?=\\)|\\(|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)(is-not|is|equals|not-equals|compare|is-empty|not-empty|is-a|is-not-a|to-code|to-string)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
           "name": "support.function.sugly"
@@ -185,7 +185,7 @@
     },
     {
       "name": "meta.function-type-sugly",
-      "match": "(?:\\)|\\s)(of|reflect|seal|is-sealed)(?=\\)|\\(|\\s)",
+      "match": "(?:\\)|\\:\\:|\\s)(of|reflect|seal|is-sealed)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
           "name": "support.function.sugly"
@@ -218,7 +218,7 @@
     },
     {
       "name": "meta.function-other-empty-sugly",
-      "match": "(?:\\)|\\s)(empty)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)(empty)\\b",
       "captures": {
         "1": {
           "name": "support.function.other.empty.sugly"
@@ -250,8 +250,20 @@
       }
     },
     {
+      "name": "meta.lambda-static-sugly",
+      "match": "(?:\\()\\s*(lambda)\\s+(static)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.function.static.sugly"
+        }
+      }
+    },
+    {
       "name": "meta.function-collection-sugly",
-      "match": "(?:\\)|\\s)(length|first-of|first|last-of|last|copy|slice|concat)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)(length|first-of|first|last-of|last|copy|slice|concat)\\b",
       "captures": {
         "1": {
           "name": "support.function.collection.sugly"
@@ -272,7 +284,7 @@
     },
     {
       "name": "meta.function-string-sugly",
-      "match": "(?:\\)|\\s)(starts-with|ends-with|trim-left|trim-right|trim|replace|to-upper|to-lower|split|char-at)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)(starts-with|ends-with|trim-left|trim-right|trim|replace|to-upper|to-lower|split|char-at)\\b",
       "captures": {
         "1": {
           "name": "support.function.string.sugly"
@@ -305,7 +317,7 @@
     },
     {
       "name": "meta.function-number-sugly",
-      "match": "(?:\\)|\\s)+(is-valid|is-invalid|is-int|is-not-int|is-bits|is-not-bits|is-finite|is-infinite|as-int|as-bits|plus|minus|times|divided-by|ceil|floor|round|trunc)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(is-valid|is-invalid|is-int|is-not-int|is-bits|is-not-bits|is-finite|is-infinite|as-int|as-bits|plus|minus|times|divided-by|ceil|floor|round|trunc)\\b",
       "captures": {
         "1": {
           "name": "support.function.number.sugly"
@@ -338,7 +350,7 @@
     },
     {
       "name": "meta.function-date-sugly",
-      "match": "(?:\\)|\\s)+(date-fields|time-fields|all-fields|week-day|timestamp)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(date-fields|time-fields|all-fields|week-day|timestamp)\\b",
       "captures": {
         "1": {
           "name": "support.function.date.sugly"
@@ -347,7 +359,7 @@
     },
     {
       "name": "meta.constant-symbol-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|function|operator|let|var|local|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -371,7 +383,7 @@
     },
     {
       "name": "meta.constant-tuple-sugly",
-      "match": "(?:\\()\\s*(tuple)\\s+(blank|unknown|lambda|function|operator|array|object)\\b",
+      "match": "(?:\\()\\s*(tuple)\\s+(blank|unknown|lambda|stambda|function|operator|array|object)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -395,7 +407,7 @@
     },
     {
       "name": "meta.function-tuple-sugly",
-      "match": "(?:\\)|\\s)+(is-plain|not-plain|as-plain|source-map|iterate|merge|to-array)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(is-plain|not-plain|as-plain|source-map|iterate|merge|to-array)\\b",
       "captures": {
         "1": {
           "name": "support.function.tuple.sugly"
@@ -404,7 +416,7 @@
     },
     {
       "name": "meta.function-operation-sugly",
-      "match": "(?:\\)|\\s)+(parameters|body|is-generic|not-generic|is-bound|not-bound|apply|bind)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(parameters|body|is-static|is-generic|not-generic|is-bound|not-bound|apply|bind)\\b",
       "captures": {
         "1": {
           "name": "support.function.operation.sugly"
@@ -425,7 +437,7 @@
     },
     {
       "name": "meta.function-iterator-sugly",
-      "match": "(?:\\)|\\s)+(skip|keep|select|map|reduce|count|sum|join|collect|finish|average)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(skip|keep|select|map|reduce|count|sum|join|collect|finish|average)\\b",
       "captures": {
         "1": {
           "name": "support.function.iterator.sugly"
@@ -446,7 +458,7 @@
     },
     {
       "name": "meta.function-array-sugly",
-      "match": "(?:\\)|\\s)+(is-sparse|not-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(is-sparse|not-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
@@ -479,7 +491,7 @@
     },
     {
       "name": "meta.function-class-sugly",
-      "match": "(?:\\)|\\s)+(default|as|from|to-object|constructor|activator)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(default|as|from|to-object|constructor|activator)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
@@ -572,7 +584,7 @@
     },
     {
       "name": "meta.function-emitter-sugly",
-      "match": "(?:\\)|\\s)+(on|off|emit)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(on|off|emit)\\b",
       "captures": {
         "1": {
           "name": "support.function.emitter.sugly"
@@ -593,7 +605,7 @@
     },
     {
       "name": "meta.function-timer-sugly",
-      "match": "(?:\\)|\\s)+(start|stop)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(start|stop)\\b",
       "captures": {
         "1": {
           "name": "support.function.timer.sugly"
@@ -602,7 +614,7 @@
     },
     {
       "name": "meta.function-class-sugly",
-      "match": "(?:\\)|\\s)+(default|as|from|to-object|constructor|activator)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(default|as|from|to-object|constructor|activator)\\b",
       "captures": {
         "1": {
           "name": "support.function.array.sugly"
