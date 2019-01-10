@@ -517,6 +517,27 @@
       }
     },
     {
+      "name": "meta.operator-debug-sugly",
+      "match": "\\b(debug)\\b",
+      "captures": {
+        "1": {
+          "name": "keyword.other.debug.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.operator-log-sugly",
+      "match": "\\b(log)\\s+(verbose|v|info|i|warning|warn|w|error|err|e|debug|d)\\b",
+      "captures": {
+        "1": {
+          "name": "keyword.other.log.sugly"
+        },
+        "2": {
+          "name": "keyword.other.levels.log.sugly"
+        }
+      }
+    },
+    {
       "name": "meta.object-lib-sugly",
       "match": "\\b(uri|math|json)\\b",
       "captures": {
@@ -575,7 +596,7 @@
     },
     {
       "name": "meta.class-lib-sugly",
-      "match": "\\b(emmiter|timer)\\b",
+      "match": "\\b(emitter|timer)\\b",
       "captures": {
         "1": {
           "name": "support.class.lib.sugly"
