@@ -5,7 +5,7 @@
       "tabLength": 2,
       "showIndentGuide": true,
       "preferredLineLength": 80,
-      "nonWordCharacters": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?…"
+      "nonWordCharacters": "(`@:$\"#)',;\\[]{}"
     },
     "bracket-matcher": {
       "autocompleteBrackets": true

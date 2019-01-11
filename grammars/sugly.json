@@ -509,7 +509,7 @@
     },
     {
       "name": "meta.function-lib-sugly",
-      "match": "\\b(print|warn)\\b",
+      "match": "\\b(print|warn|max|min)\\b",
       "captures": {
         "1": {
           "name": "support.function.lib.sugly"
@@ -572,7 +572,7 @@
     },
     {
       "name": "meta.constant-math-lib-sugly",
-      "match": "(?:\\()\\s*(math)\\s+(e|pi)\\b",
+      "match": "(?:\\()\\s*(math)\\s+(e|pi|ln2|ln10|log-e|log2-e|sqrt-2|sqrt-1/2)\\b",
       "captures": {
         "1": {
           "name": "support.variable.math.lib.sugly"
@@ -584,7 +584,7 @@
     },
     {
       "name": "meta.function-math-lib-sugly",
-      "match": "(?:\\()\\s*(math)\\s+(\\w+)\\b",
+      "match": "(?:\\()\\s*(math)\\s+(sin|cos|tan|asin|acos|atan|atan2|exp|pow|ln|log|log2|sqrt|abs|random)\\b",
       "captures": {
         "1": {
           "name": "support.variable.math.lib.sugly"
