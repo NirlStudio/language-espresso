@@ -626,7 +626,7 @@
     },
     {
       "name": "meta.function-timer-sugly",
-      "match": "(?:\\)|\\:\\:|\\s)+(start|stop)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(start|is-elapsing|stop)\\b",
       "captures": {
         "1": {
           "name": "support.function.timer.sugly"
