@@ -458,7 +458,7 @@
     },
     {
       "name": "meta.function-promise-type-sugly",
-      "match": "(?:\\()\\s*(promise)\\s+(of-(resolved|rejected|all|any))\\b",
+      "match": "(?:\\()\\s*(promise)\\s+(of-resolved|of-rejected|of-all|all|of-any|any)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
