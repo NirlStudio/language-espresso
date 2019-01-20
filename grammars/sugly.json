@@ -86,7 +86,7 @@
     },
     {
       "name": "meta.type-generic-sugly",
-      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|iterator|array|object|class)\\b",
+      "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|iterator|promise|array|object|class)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -194,7 +194,7 @@
     },
     {
       "name": "meta.constant-empty-sugly",
-      "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple|iterator)\\s+(empty)\\b",
+      "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple|iterator|promise)\\s+(empty)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -441,6 +441,39 @@
       "captures": {
         "1": {
           "name": "support.function.iterator.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.constant-promise-sugly",
+      "match": "(?:\\()\\s*(promise)\\s+(nothing)\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.constant.promise.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.function-promise-type-sugly",
+      "match": "(?:\\()\\s*(promise)\\s+(of-(resolved|rejected|all|any))\\b",
+      "captures": {
+        "1": {
+          "name": "storage.type.generic.sugly"
+        },
+        "2": {
+          "name": "support.function.promise.type.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.function-promise-sugly",
+      "match": "(?:\\)|\\:\\:|\\s)+(then|catch|finally)\\b",
+      "captures": {
+        "1": {
+          "name": "support.function.promise.sugly"
         }
       }
     },
