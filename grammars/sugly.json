@@ -359,7 +359,7 @@
     },
     {
       "name": "meta.constant-symbol-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(invalid|etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -371,13 +371,22 @@
     },
     {
       "name": "meta.function-symbol-type-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(of-shared)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(of-shared|is-safe)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
         },
         "2": {
           "name": "support.function.symbol.type.sugly"
+        }
+      }
+    },
+    {
+      "name": "meta.function-symbol-sugly",
+      "match": "(?:\\)|\\:\\:|\\s)+(key|is-safe|is-unsafe)\\b",
+      "captures": {
+        "1": {
+          "name": "support.function.symbol.sugly"
         }
       }
     },
