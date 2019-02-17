@@ -359,7 +359,7 @@
     },
     {
       "name": "meta.constant-symbol-sugly",
-      "match": "(?:\\()\\s*(symbol)\\s+(etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|escape|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
