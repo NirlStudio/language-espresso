@@ -593,7 +593,7 @@
     },
     {
       "name": "meta.function-lib-sugly",
-      "match": "\\b(print|warn|max|min)\\b",
+      "match": "\\b(print[f]?|warn|max|min)\\b",
       "captures": {
         "1": {
           "name": "support.function.lib.sugly"
