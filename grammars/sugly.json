@@ -272,7 +272,7 @@
     },
     {
       "name": "meta.function-string-type-sugly",
-      "match": "\\b(string)\\s+(of-chars|of-code|unescape|format)\\b",
+      "match": "(?:\\()\\s*(string)\\s+(of-chars|of-code|unescape|format)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -305,7 +305,7 @@
     },
     {
       "name": "meta.function-number-type-sugly",
-      "match": "\\b(number)\\s+(parse-int|parse|of-int|of-bits)\\b",
+      "match": "(?:\\()\\s*(number)\\s+(parse-int|parse|of-int|of-bits)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -338,7 +338,7 @@
     },
     {
       "name": "meta.function-date-type-sugly",
-      "match": "\\b(date)\\s+(parse|of-utc|now|timestamp|timezone)\\b",
+      "match": "(?:\\()\\s*(date)\\s+(parse|of-utc|now|timestamp|timezone)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -371,7 +371,7 @@
     },
     {
       "name": "meta.function-symbol-type-sugly",
-      "match": "\\b(symbol)\\s+(of-shared|is-safe)\\b",
+      "match": "(?:\\()\\s*(symbol)\\s+(of-shared|is-safe)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -404,7 +404,7 @@
     },
     {
       "name": "meta.function-tuple-type-sugly",
-      "match": "\\b(tuple)\\s+(accepts|atom-of|of-plain|from-plain|from)\\b",
+      "match": "(?:\\()\\s*(tuple)\\s+(accepts|atom-of|of-plain|from-plain|from)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -434,7 +434,7 @@
     },
     {
       "name": "meta.function-iterator-type-sugly",
-      "match": "\\b(iterator)\\s+(of-unsafe)\\b",
+      "match": "(?:\\()\\s*(iterator)\\s+(of-unsafe)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -446,7 +446,7 @@
     },
     {
       "name": "meta.function-iterator-sugly",
-      "match": "(?:\\)|\\:\\:|\\s)+(skip|keep|select|map|reduce|count|for-each|sum|join|collect|finish|average)\\b",
+      "match": "(?:\\)|\\:\\:|\\s)+(skip|keep|select|map|reduce|count|sum|join|collect|finish|average)\\b",
       "captures": {
         "1": {
           "name": "support.function.iterator.sugly"
@@ -473,7 +473,7 @@
     },
     {
       "name": "meta.constant-waiting-promise-sugly",
-      "match": "\\b(waiting)\\s+(result|excuse)\\b",
+      "match": "(?:\\()\\s*(waiting)\\s+(result|excuse)\\b",
       "captures": {
         "1": {
           "name": "support.variable.object.promise.sugly"
@@ -509,7 +509,7 @@
     },
     {
       "name": "meta.function-promise-type-sugly",
-      "match": "\\b(promise)\\s+(of-resolved|of-rejected|of-all|all|of-any|any)\\b",
+      "match": "(?:\\()\\s*(promise)\\s+(of-resolved|of-rejected|of-all|all|of-any|any)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -530,7 +530,7 @@
     },
     {
       "name": "meta.function-array-type-sugly",
-      "match": "\\b(array)\\s+(from)\\b",
+      "match": "(?:\\()\\s*(array)\\s+(from)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -551,7 +551,7 @@
     },
     {
       "name": "meta.function-object-type-sugly",
-      "match": "\\b(object)\\s+(assign|owns|fields-of)\\b",
+      "match": "(?:\\()\\s*(object)\\s+(assign|owns|fields-of)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
@@ -563,7 +563,7 @@
     },
     {
       "name": "meta.function-class-type-sugly",
-      "match": "\\b(class)\\s+(attach)\\b",
+      "match": "(?:\\()\\s*(class)\\s+(attach)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
