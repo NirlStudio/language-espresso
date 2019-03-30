@@ -1,40 +1,4 @@
 {
   ".source.sugly": {
-    "if": {
-      "prefix": "if",
-      "body": "(if ${1:test}\n  ${2:true}\nelse\n  ${3:false}\n),"
-    },
-    "for": {
-      "prefix": "for",
-      "body": "(for ${1:init} ${2:test} ${3:increment}\n  ${4:body}\n),"
-    },
-    "for-in": {
-      "prefix": "forin",
-      "body": "(for ${1:item} in ${2:iterable}\n  ${3:body\n}),"
-    },
-    "while": {
-      "prefix": "while",
-      "body": "(while ${1:condition}\n  ${2:body}\n),"
-    },
-    "?": {
-      "prefix": "?",
-      "body": "(? ${1:test} ${2:true} ${3:false}),"
-    },
-    "operation": {
-      "prefix": "=",
-      "body": "(= (${1:params})\n  ${2:body}\n),"
-    },
-    "let": {
-      "prefix": "let",
-      "body": "(let ${1:name} ${2:value}),"
-    },
-    "var": {
-      "prefix": "var",
-      "body": "(var ${1:name} ${2:value}),"
-    },
-    "export": {
-      "prefix": "export",
-      "body": "(export ${1:name} ${2:value}),"
-    }
   }
 }

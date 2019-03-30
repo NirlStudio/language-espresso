@@ -1,14 +1,14 @@
 {
   ".source.sugly": {
     "editor": {
-      "commentStart": "# ",
+      "commentStart": "#",
       "tabLength": 2,
       "showIndentGuide": true,
       "preferredLineLength": 80,
       "nonWordCharacters": "(`@:$\"#)',;\\[]{}"
     },
     "bracket-matcher": {
-      "autocompleteBrackets": true
+      "autocompleteBrackets": false
     }
   }
 }
