@@ -551,7 +551,7 @@
     },
     {
       "name": "meta.function-object-type-sugly",
-      "match": "(?:\\(|\\s)\\s*(object)\\s+(assign|owns|fields-of)\\b",
+      "match": "(?:\\(|\\s)\\s*(object)\\s+(of-generic|is-generic|not-generic|of-plain|is-plain|not-plain|assign|owns|fields-of)\\b",
       "captures": {
         "1": {
           "name": "storage.type.generic.sugly"
