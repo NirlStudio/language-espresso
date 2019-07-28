@@ -1,19 +1,19 @@
 {
-  "name": "language-sugly",
+  "name": "language-espresso",
   "version": "1.0.3",
   "author": {
     "email": "leevi@nirlstudio.com",
     "name": "Leevi"
   },
   "license": "MIT",
-  "repository": "https://github.com/nirlstudio/language-sugly",
-  "description": "Sugly support for Atom (originally ported from language-lisp)",
+  "repository": "https://github.com/nirlstudio/language-espresso",
+  "description": "Espresso lang support for Atom (originally ported from language-lisp)",
   "engines": {
     "atom": ">1.0.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/nirlstudio/language-sugly/issues"
+    "url": "https://github.com/nirlstudio/language-espresso/issues"
   },
-  "homepage": "https://github.com/nirlstudio/language-sugly#readme"
+  "homepage": "https://github.com/nirlstudio/language-espresso#readme"
 }

@@ -1,787 +1,786 @@
 {
-  "name": "Sugly",
-  "scopeName": "source.sugly",
+  "name": "Espresso",
+  "scopeName": "source.espresso",
   "fileTypes": [
-    "sugly",
-    "s"
+    "es"
   ],
   "foldingStartMarker": "\\(\\s*$",
   "foldingStopMarker": "^\\s*\\)[\\.\\,]?",
   "patterns": [
     {
-      "name": "comment.line.hash.sugly",
+      "name": "comment.line.hash.espresso",
       "match": "(#)[^(].*$\\n?",
       "captures": {
         "1": {
-          "name": "punctuation.definition.comment.sugly"
+          "name": "punctuation.definition.comment.espresso"
         }
       }
     },
     {
-      "name": "keyword.other.punctuation.sugly",
+      "name": "keyword.other.punctuation.espresso",
       "match": "[\\:\\@\\`\\$]"
     },
     {
-      "name": "meta.keyword-quote-sugly",
+      "name": "meta.keyword-quote-espresso",
       "match": "\\(\\s*(quote|unquote)\\b",
       "captures": {
         "1": {
-          "name": "keyword.other.quote.sugly"
+          "name": "keyword.other.quote.espresso"
         }
       }
     },
     {
-      "name": "meta.keyword-assignment-sugly",
+      "name": "meta.keyword-assignment-espresso",
       "match": "\\b(let|var|const|local|locon|export|import|load|fetch)\\b",
       "captures": {
         "1": {
-          "name": "keyword.other.assignment.sugly"
+          "name": "keyword.other.assignment.espresso"
         }
       }
     },
     {
-      "name": "meta.control-flow-sugly",
+      "name": "meta.control-flow-espresso",
       "match": "\\b(if|for|while|break|continue)\\b",
       "captures": {
         "1": {
-          "name": "keyword.control.flow.sugly"
+          "name": "keyword.control.flow.espresso"
         }
       }
     },
     {
-      "name": "meta.control-preposition-sugly",
+      "name": "meta.control-preposition-espresso",
       "match": "\\b(else|in)\\b",
       "captures": {
         "1": {
-          "name": "keyword.control.preposition.sugly"
+          "name": "keyword.control.preposition.espresso"
         }
       }
     },
     {
-      "name": "meta.control-procedure-sugly",
+      "name": "meta.control-procedure-espresso",
       "match": "\\b(redo|return|exit)\\b",
       "captures": {
         "1": {
-          "name": "keyword.control.procedure.sugly"
+          "name": "keyword.control.procedure.espresso"
         }
       }
     },
     {
-      "name": "meta.function-self-sugly",
+      "name": "meta.function-self-espresso",
       "match": "\\b(do)\\b",
       "captures": {
         "1": {
-          "name": "support.function.self.sugly"
+          "name": "support.function.self.espresso"
         }
       }
     },
     {
-      "name": "meta.variable-language-sugly",
+      "name": "meta.variable-language-espresso",
       "match": "\\b(this|arguments|that|operation|operand)\\b",
       "captures": {
         "1": {
-          "name": "variable.language.sugly"
+          "name": "variable.language.espresso"
         }
       }
     },
     {
-      "name": "meta.type-generic-sugly",
+      "name": "meta.type-generic-espresso",
       "match": "\\b(type|bool|number|date|string|range|symbol|tuple|operator|lambda|function|iterator|promise|array|object|class)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-language-sugly",
+      "name": "meta.constant-language-espresso",
       "match": "\\b(null|true|false|descending|equivalent|ascending)\\b",
       "captures": {
         "1": {
-          "name": "constant.language.sugly"
+          "name": "constant.language.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-operator-decl-sugly",
+      "name": "meta.operator-operator-decl-espresso",
       "match": "\\(\\s*(\\=\\?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.operator-decl.sugly"
+          "name": "keyword.other.operator-decl.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-lambda-decl-sugly",
+      "name": "meta.operator-lambda-decl-espresso",
       "match": "\\(\\s*(\\-\\>|\\=[\\>]?)(?=\\(|\\)|\\:|\\s)",
       "captures": {
         "1": {
-          "name": "support.function.lambda-decl.sugly"
+          "name": "support.function.lambda-decl.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-global-sugly",
+      "name": "meta.operator-global-espresso",
       "match": "[\\(|\\s]\\s*(\\+|\\?|\\!|not|or|and|\\~)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.global.sugly"
+          "name": "keyword.other.global.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-double-sugly",
+      "name": "meta.operator-double-espresso",
       "match": "\\(\\s*(\\+\\+|--)(?=\\(|\\)|\\:|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.double.sugly"
+          "name": "keyword.other.double.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-general-sugly",
+      "name": "meta.operator-general-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(\\?[\\*\\?]?|\\&\\&|\\|\\|)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.general.sugly"
+          "name": "keyword.other.general.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-arithmetic-sugly",
+      "name": "meta.operator-arithmetic-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(\\+[\\+\\=]?|\\-[\\-\\=]?|\\*[\\=]?|\\/[\\=]?|\\%[\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.arithmetic.sugly"
+          "name": "keyword.other.arithmetic.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-bitwise-sugly",
+      "name": "meta.operator-bitwise-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(\\&[\\=]?|\\|[\\=]?|\\^[\\=]?|\\<\\<[\\=]?|\\>{2,3}[\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.bitwise.sugly"
+          "name": "keyword.other.bitwise.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-comparison-sugly",
+      "name": "meta.operator-comparison-espresso",
       "match": "(?:\\)|\\:\\:|\\s)([\\!\\=]\\={2}|[\\=\\!][\\=]|[\\>\\<][\\=]?)(?=\\(|\\)|\\s)",
       "captures": {
         "1": {
-          "name": "keyword.other.sugly"
+          "name": "keyword.other.espresso"
         }
       }
     },
     {
-      "name": "meta.function-entity-sugly",
+      "name": "meta.function-entity-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(is-not|is|equals|not-equals|compare|is-empty|not-empty|is-a[n]?|is-not-a[n]?|to-code|to-string)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
-          "name": "support.function.sugly"
+          "name": "support.function.espresso"
         }
       }
     },
     {
-      "name": "meta.function-type-sugly",
+      "name": "meta.function-type-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(of|reflect|seal|is-sealed)(?=\\)|\\(|\\s)",
       "captures": {
         "1": {
-          "name": "support.function.sugly"
+          "name": "support.function.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-empty-sugly",
+      "name": "meta.constant-empty-espresso",
       "match": "(?:\\()\\s*(type|bool|string|number|date|range|symbol|tuple|iterator|promise)\\s+(empty)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.empty.sugly"
+          "name": "support.constant.empty.espresso"
         }
       }
     },
     {
-      "name": "meta.function-empty-sugly",
+      "name": "meta.function-empty-espresso",
       "match": "(?:\\()\\s*(operator|lambda|function|array|object|class)\\s+(empty)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.empty.sugly"
+          "name": "support.function.empty.espresso"
         }
       }
     },
     {
-      "name": "meta.function-other-empty-sugly",
+      "name": "meta.function-other-empty-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(empty)\\b",
       "captures": {
         "1": {
-          "name": "support.function.other.empty.sugly"
+          "name": "support.function.other.empty.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-noop-sugly",
+      "name": "meta.operator-noop-espresso",
       "match": "(?:\\()\\s*(operator)\\s+(noop)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "keyword.other.operator_.noop.sugly"
+          "name": "keyword.other.operator_.noop.espresso"
         }
       }
     },
     {
-      "name": "meta.lambda-noop-sugly",
+      "name": "meta.lambda-noop-espresso",
       "match": "(?:\\()\\s*(lambda|function)\\s+(noop)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.noop.sugly"
+          "name": "support.function.noop.espresso"
         }
       }
     },
     {
-      "name": "meta.lambda-static-sugly",
+      "name": "meta.lambda-static-espresso",
       "match": "(?:\\()\\s*(lambda)\\s+(static)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.static.sugly"
+          "name": "support.function.static.espresso"
         }
       }
     },
     {
-      "name": "meta.function-collection-sugly",
+      "name": "meta.function-collection-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(length|first-of|first|last-of|last|copy|slice|concat)\\b",
       "captures": {
         "1": {
-          "name": "support.function.collection.sugly"
+          "name": "support.function.collection.espresso"
         }
       }
     },
     {
-      "name": "meta.function-string-type-sugly",
+      "name": "meta.function-string-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(string)\\s+(of-chars|of-code|unescape|format)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.string.type.sugly"
+          "name": "support.function.string.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-string-sugly",
+      "name": "meta.function-string-espresso",
       "match": "(?:\\)|\\:\\:|\\s)(starts-with|ends-with|trim-left|trim-right|trim|replace|to-upper|to-lower|split|char-at)\\b",
       "captures": {
         "1": {
-          "name": "support.function.string.sugly"
+          "name": "support.function.string.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-number-sugly",
+      "name": "meta.constant-number-espresso",
       "match": "(?:\\()\\s*(number)\\s+(max-int|min-int|max-bits|min-bits|infinite|-infinite|max|min|bits|invalid|smallest)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.number.sugly"
+          "name": "support.constant.number.espresso"
         }
       }
     },
     {
-      "name": "meta.function-number-type-sugly",
+      "name": "meta.function-number-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(number)\\s+(parse-int|parse|of-int|of-bits)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.number.type.sugly"
+          "name": "support.function.number.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-number-sugly",
+      "name": "meta.function-number-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(is-valid|is-invalid|is-int|is-not-int|is-bits|is-not-bits|is-finite|is-infinite|as-int|as-bits|plus|minus|times|divided-by|ceil|floor|round|trunc)\\b",
       "captures": {
         "1": {
-          "name": "support.function.number.sugly"
+          "name": "support.function.number.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-date-sugly",
+      "name": "meta.constant-date-espresso",
       "match": "(?:\\()\\s*(date)\\s+(invalid)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.date.sugly"
+          "name": "support.constant.date.espresso"
         }
       }
     },
     {
-      "name": "meta.function-date-type-sugly",
+      "name": "meta.function-date-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(date)\\s+(parse|of-utc|now|timestamp|timezone)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.date.type.sugly"
+          "name": "support.function.date.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-date-sugly",
+      "name": "meta.function-date-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(date-fields|time-fields|all-fields|week-day|timestamp)\\b",
       "captures": {
         "1": {
-          "name": "support.function.date.sugly"
+          "name": "support.function.date.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-symbol-sugly",
+      "name": "meta.constant-symbol-espresso",
       "match": "(?:\\()\\s*(symbol)\\s+(etc|all|any|quote|lambda|stambda|function|operator|let|var|const|local|locon|escape|begin|end|comma|semicolon|period|literal|pairing|subject|comment)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.symbol.sugly"
+          "name": "support.constant.symbol.espresso"
         }
       }
     },
     {
-      "name": "meta.function-symbol-type-sugly",
+      "name": "meta.function-symbol-type-espresso",
       "match": "(?:\\()\\s*(symbol)\\s+(of-shared|is-safe)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.symbol.type.sugly"
+          "name": "support.function.symbol.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-symbol-sugly",
+      "name": "meta.function-symbol-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(key|is-safe|is-unsafe)\\b",
       "captures": {
         "1": {
-          "name": "support.function.symbol.sugly"
+          "name": "support.function.symbol.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-tuple-sugly",
+      "name": "meta.constant-tuple-espresso",
       "match": "(?:\\()\\s*(tuple)\\s+(blank|unknown|lambda|stambda|function|operator|array|object)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.tuple.sugly"
+          "name": "support.constant.tuple.espresso"
         }
       }
     },
     {
-      "name": "meta.function-tuple-type-sugly",
+      "name": "meta.function-tuple-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(tuple)\\s+(accepts|atom-of|of-plain|from-plain|from)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.tuple.type.sugly"
+          "name": "support.function.tuple.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-tuple-sugly",
+      "name": "meta.function-tuple-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(is-plain|not-plain|as-plain|source-map|iterate|merge|to-array)\\b",
       "captures": {
         "1": {
-          "name": "support.function.tuple.sugly"
+          "name": "support.function.tuple.espresso"
         }
       }
     },
     {
-      "name": "meta.function-operation-sugly",
+      "name": "meta.function-operation-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(parameters|body|is-static|is-const|is-generic|not-generic|generic|is-bound|not-bound|apply|bind)\\b",
       "captures": {
         "1": {
-          "name": "support.function.operation.sugly"
+          "name": "support.function.operation.espresso"
         }
       }
     },
     {
-      "name": "meta.function-iterator-type-sugly",
+      "name": "meta.function-iterator-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(iterator)\\s+(of-unsafe)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.iterator.type.sugly"
+          "name": "support.function.iterator.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-iterator-sugly",
+      "name": "meta.function-iterator-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(skip|keep|select|map|reduce|count|for-each|sum|join|collect|finish|average)\\b",
       "captures": {
         "1": {
-          "name": "support.function.iterator.sugly"
+          "name": "support.function.iterator.espresso"
         }
       }
     },
     {
-      "name": "meta.function-global-promise-sugly",
+      "name": "meta.function-global-promise-espresso",
       "match": "\\b(commit|commit\\*|commit\\?)(\\s|\\(|\\))",
       "captures": {
         "1": {
-          "name": "support.function.global.promise.sugly"
+          "name": "support.function.global.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.object-promise-sugly",
+      "name": "meta.object-promise-espresso",
       "match": "\\b(waiting|async)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.object.promise.sugly"
+          "name": "support.variable.object.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-waiting-promise-sugly",
+      "name": "meta.constant-waiting-promise-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(waiting)\\s+(result|excuse)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.object.promise.sugly"
+          "name": "support.variable.object.promise.espresso"
         },
         "2": {
-          "name": "support.constant.waiting.promise.sugly"
+          "name": "support.constant.waiting.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.function-async-promise-sugly",
+      "name": "meta.function-async-promise-espresso",
       "match": "(?:\\(|\\s)\\s*(async)\\s+(resolve|reject)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.object.promise.sugly"
+          "name": "support.variable.object.promise.espresso"
         },
         "2": {
-          "name": "support.function.waiting.promise.sugly"
+          "name": "support.function.waiting.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-promise-sugly",
+      "name": "meta.constant-promise-espresso",
       "match": "(?:\\()\\s*(promise)\\s+(nothing)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.constant.promise.sugly"
+          "name": "support.constant.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.function-promise-type-sugly",
+      "name": "meta.function-promise-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(promise)\\s+(of-resolved|of-rejected|of-all|all|of-any|any)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.promise.type.sugly"
+          "name": "support.function.promise.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-promise-sugly",
+      "name": "meta.function-promise-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(is-cancellable|cancel|then|finally)\\b",
       "captures": {
         "1": {
-          "name": "support.function.promise.sugly"
+          "name": "support.function.promise.espresso"
         }
       }
     },
     {
-      "name": "meta.function-array-type-sugly",
+      "name": "meta.function-array-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(array)\\s+(from)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.array.type.sugly"
+          "name": "support.function.array.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-array-sugly",
+      "name": "meta.function-array-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(is-sparse|not-sparse|as-sparse|trace|retrace|append|get|set|reset|clear|remove|replace|has|contains|swap|insert|delete|splice|pop|push|enqueue|dequeue|reverse|sort|find)\\b",
       "captures": {
         "1": {
-          "name": "support.function.array.sugly"
+          "name": "support.function.array.espresso"
         }
       }
     },
     {
-      "name": "meta.function-object-type-sugly",
+      "name": "meta.function-object-type-espresso",
       "match": "(?:\\(|\\s)\\s*(object)\\s+(of-generic|is-generic|not-generic|of-plain|is-plain|not-plain|assign|owns|fields-of)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.object.type.sugly"
+          "name": "support.function.object.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-class-type-sugly",
+      "name": "meta.function-class-type-espresso",
       "match": "(?:\\(|\\n|\\s)\\s*(class)\\s+(attach)\\b",
       "captures": {
         "1": {
-          "name": "storage.type.generic.sugly"
+          "name": "storage.type.generic.espresso"
         },
         "2": {
-          "name": "support.function.class.type.sugly"
+          "name": "support.function.class.type.espresso"
         }
       }
     },
     {
-      "name": "meta.function-class-sugly",
+      "name": "meta.function-class-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(default|as|from|to-object|constructor|activator)\\b",
       "captures": {
         "1": {
-          "name": "support.function.array.sugly"
+          "name": "support.function.array.espresso"
         }
       }
     },
     {
-      "name": "meta.function-runtime-sugly",
+      "name": "meta.function-runtime-espresso",
       "match": "\\b(compile|compiler|tokenize|tokenizer|interpreter|eval|run|env)\\b",
       "captures": {
         "1": {
-          "name": "support.function.runtime.sugly"
+          "name": "support.function.runtime.espresso"
         }
       }
     },
     {
-      "name": "meta.function-lib-sugly",
-      "match": "\\b(print[f]?|warn|max|min|suglify)\\b",
+      "name": "meta.function-lib-espresso",
+      "match": "\\b(print[f]?|warn|max|min|espress)\\b",
       "captures": {
         "1": {
-          "name": "support.function.lib.sugly"
+          "name": "support.function.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-debug-sugly",
+      "name": "meta.operator-debug-espresso",
       "match": "\\b(debug)\\b",
       "captures": {
         "1": {
-          "name": "keyword.other.debug.sugly"
+          "name": "keyword.other.debug.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-log-sugly",
+      "name": "meta.operator-log-espresso",
       "match": "\\b(log)\\s+(verbose|v|info|i|warning|warn|w|error|err|e|debug|d)\\b",
       "captures": {
         "1": {
-          "name": "keyword.other.log.sugly"
+          "name": "keyword.other.log.espresso"
         },
         "2": {
-          "name": "keyword.other.levels.log.sugly"
+          "name": "keyword.other.levels.log.espresso"
         }
       }
     },
     {
-      "name": "meta.object-lib-sugly",
+      "name": "meta.object-lib-espresso",
       "match": "\\b(uri|math|json)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.object.lib.sugly"
+          "name": "support.variable.object.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.function-uri-lib-sugly",
+      "name": "meta.function-uri-lib-espresso",
       "match": "(?:\\(|\\s)\\s*(uri)\\s+(encode|decode|escape|unescape)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.uri.lib.sugly"
+          "name": "support.variable.uri.lib.espresso"
         },
         "2": {
-          "name": "support.function.uri.lib.sugly"
+          "name": "support.function.uri.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.function-json-lib-sugly",
+      "name": "meta.function-json-lib-espresso",
       "match": "(?:\\(|\\s)\\s*(json)\\s+(of|parse)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.json.lib.sugly"
+          "name": "support.variable.json.lib.espresso"
         },
         "2": {
-          "name": "support.function.json.lib.sugly"
+          "name": "support.function.json.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.constant-math-lib-sugly",
+      "name": "meta.constant-math-lib-espresso",
       "match": "(?:\\(|\\s)\\s*(math)\\s+(e|pi|ln2|ln10|log-e|log2-e|sqrt-2|sqrt-1/2)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.math.lib.sugly"
+          "name": "support.variable.math.lib.espresso"
         },
         "2": {
-          "name": "support.constant.math.lib.sugly"
+          "name": "support.constant.math.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.function-math-lib-sugly",
+      "name": "meta.function-math-lib-espresso",
       "match": "(?:\\(|\\s)\\s*(math)\\s+(sin|cos|tan|asin|acos|atan|atan2|exp|pow|ln|log|log2|sqrt|abs|random)\\b",
       "captures": {
         "1": {
-          "name": "support.variable.math.lib.sugly"
+          "name": "support.variable.math.lib.espresso"
         },
         "2": {
-          "name": "support.function.math.lib.sugly"
+          "name": "support.function.math.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.class-lib-sugly",
+      "name": "meta.class-lib-espresso",
       "match": "\\b(emitter|timer)\\b",
       "captures": {
         "1": {
-          "name": "support.class.lib.sugly"
+          "name": "support.class.lib.espresso"
         }
       }
     },
     {
-      "name": "meta.function-emitter-sugly",
+      "name": "meta.function-emitter-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(on|off|emit)\\b",
       "captures": {
         "1": {
-          "name": "support.function.emitter.sugly"
+          "name": "support.function.emitter.espresso"
         }
       }
     },
     {
-      "name": "meta.function-timer-class-sugly",
+      "name": "meta.function-timer-class-espresso",
       "match": "(?:\\(|\\s)\\s*(timer)\\s+(timeout|countdown)\\b",
       "captures": {
         "1": {
-          "name": "support.class.timer.sugly"
+          "name": "support.class.timer.espresso"
         },
         "2": {
-          "name": "support.function.timer.class.sugly"
+          "name": "support.function.timer.class.espresso"
         }
       }
     },
     {
-      "name": "meta.function-timer-sugly",
+      "name": "meta.function-timer-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(start|is-elapsing|stop)\\b",
       "captures": {
         "1": {
-          "name": "support.function.timer.sugly"
+          "name": "support.function.timer.espresso"
         }
       }
     },
     {
-      "name": "meta.function-class-sugly",
+      "name": "meta.function-class-espresso",
       "match": "(?:\\)|\\:\\:|\\s)+(default|as|from|to-object|constructor|activator)\\b",
       "captures": {
         "1": {
-          "name": "support.function.array.sugly"
+          "name": "support.function.array.espresso"
         }
       }
     },
     {
-      "name": "meta.function-test-sugly",
+      "name": "meta.function-test-espresso",
       "match": "\\b(define|should|test)\\b",
       "captures": {
         "1": {
-          "name": "support.function.test.sugly"
+          "name": "support.function.test.espresso"
         }
       }
     },
     {
-      "name": "meta.operator-test-sugly",
+      "name": "meta.operator-test-espresso",
       "match": "\\b(assert)\\b",
       "captures": {
         "1": {
-          "name": "keyword.other.assert.test.sugly"
+          "name": "keyword.other.assert.test.espresso"
         }
       }
     },
     {
-      "name": "constant.numeric.oct.sugly",
+      "name": "constant.numeric.oct.espresso",
       "match": "\\b(0[0-7]+i?)\\b"
     },
     {
-      "name": "constant.numeric.int.sugly",
+      "name": "constant.numeric.int.espresso",
       "match": "\\b((0|[1-9][0-9]*)i?)\\b"
     },
     {
-      "name": "constant.numeric.hex.sugly",
+      "name": "constant.numeric.hex.espresso",
       "match": "\\b(0x[0-9a-fA-F]+i?)\\b"
     },
     {
-      "name": "constant.numeric.binary.sugly",
+      "name": "constant.numeric.binary.espresso",
       "match": "\\b(0b[01]+i?)\\b"
     },
     {
-      "name": "constant.numeric.decimal.sugly",
+      "name": "constant.numeric.decimal.espresso",
       "match": "\\b((([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b"
     },
     {
       "begin": "\"",
       "beginCaptures": {
         "0": {
-          "name": "punctuation.definition.string.begin.sugly"
+          "name": "punctuation.definition.string.begin.espresso"
         }
       },
       "end": "\"",
       "endCaptures": {
         "0": {
-          "name": "punctuation.definition.string.end.sugly"
+          "name": "punctuation.definition.string.end.espresso"
         }
       },
-      "name": "string.quoted.double.sugly",
+      "name": "string.quoted.double.espresso",
       "patterns": [
         {
           "match": "\\\\.",
-          "name": "constant.character.escape.sugly"
+          "name": "constant.character.escape.espresso"
         }
       ]
     },
@@ -789,20 +788,20 @@
       "begin": "'",
       "beginCaptures": {
         "0": {
-          "name": "punctuation.definition.string.begin.sugly"
+          "name": "punctuation.definition.string.begin.espresso"
         }
       },
       "end": "'",
       "endCaptures": {
         "0": {
-          "name": "punctuation.definition.string.end.sugly"
+          "name": "punctuation.definition.string.end.espresso"
         }
       },
-      "name": "string.format.single.sugly",
+      "name": "string.format.single.espresso",
       "patterns": [
         {
           "match": "\\\\.",
-          "name": "constant.character.escape.sugly"
+          "name": "constant.character.escape.espresso"
         }
       ]
     },
@@ -810,16 +809,16 @@
       "begin": "#\\(",
       "beginCaptures": {
         "0": {
-          "name": "punctuation.definition.comment.begin.sugly"
+          "name": "punctuation.definition.comment.begin.espresso"
         }
       },
       "end": "\\)#",
       "endCaptures": {
         "0": {
-          "name": "punctuation.definition.comment.end.sugly"
+          "name": "punctuation.definition.comment.end.espresso"
         }
       },
-      "name": "comment.block.hash.sugly"
+      "name": "comment.block.hash.espresso"
     }
   ]
 }

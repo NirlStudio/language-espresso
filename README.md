@@ -1,9 +1,9 @@
-Sugly language support in Atom
+Espresso script language support in Atom
 ==============================
 This package is originally ported from language-lisp.
 
 ```
-apm install language-sugly
+apm install language-espresso
 ```
 
-**Enjoy the sugliness.**
+**Enjoy the Espresso.**
